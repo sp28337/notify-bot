@@ -10,3 +10,7 @@ dependencies = [
     "pydantic-settings>=2.12.0",
     "ruff>=0.14.11",
 ]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I", "UP"]
