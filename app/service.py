@@ -2,7 +2,7 @@ import logging
 
 from aiogram import Bot
 from aiohttp import web
-from settings import settings as s
+from app.settings import settings as s
 
 logger = logging.getLogger(__name__)
 

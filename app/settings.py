@@ -8,6 +8,7 @@ class BotSettings(BaseModel):
     token: str = ""
     target_chat_id: int = 0
     webhook_url: str = ""
+    webhook_path: str = ""
     webhook_secret: str = ""
 
 

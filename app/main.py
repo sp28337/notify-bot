@@ -6,9 +6,9 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
-from settings import settings as s
+from app.settings import settings as s
 
-from .service import register_routes
+from app.service import register_routes
 
 
 async def on_startup(bot: Bot) -> None:
