@@ -2,6 +2,7 @@ import logging
 
 from aiogram import Bot
 from aiohttp import web
+
 from app.settings import settings as s
 
 logger = logging.getLogger(__name__)
@@ -12,9 +13,10 @@ async def send_notification(request: web.Request) -> web.Response:
 
     data = await request.json()
     message = data.get("message")
+    chat_id = s.bot.target_chat_id
 
     try:
-        await bot.send_message(chat_id=s.bot.target_chat_id, text=message)
+        await bot.send_message(chat_id=chat_id, text=message)
         return web.json_response({"ok": True})
     except Exception as e:
         logger.exception("Telegram send failed")
